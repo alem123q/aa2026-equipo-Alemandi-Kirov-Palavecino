@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cómo empezar</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+         max-width: 760px; margin: 0 auto; padding: 32px 24px 80px;
+         color: #202124; line-height: 1.6; }
+  h1 { font-size: 28px; margin: 0 0 4px; color: #0F52BA; }
+  .bajada { color: #6B7280; margin: 0 0 28px; }
+  h2 { font-size: 19px; margin: 34px 0 10px; padding: 8px 12px;
+       background: #0F52BA; color: #fff; border-radius: 6px; }
+  ol { padding-left: 22px; }
+  li { margin: 7px 0; }
+  pre { background: #F3F5F9; border-left: 4px solid #0090A8; padding: 12px 14px;
+        border-radius: 4px; overflow-x: auto; font-size: 14px; }
+  code { background: #F3F5F9; padding: 1px 5px; border-radius: 3px; font-size: 0.93em; }
+  .aviso { background: #FFF8E6; border-left: 4px solid #B37A00;
+           padding: 10px 14px; border-radius: 4px; margin: 14px 0; }
+  .ok { background: #EAF6EF; border-left: 4px solid #1E7D46;
+        padding: 10px 14px; border-radius: 4px; margin: 14px 0; }
+  .elegi { background: #F3F5F9; border-radius: 6px; padding: 14px 18px; margin: 18px 0; }
+</style>
+</head>
+<body>
+
+<h1>Cómo empezar</h1>
+<p class="bajada">Aprendizaje Automático y Grandes Datos · Inteligencia Artificial y
+Aprendizaje Automático</p>
+
+<p>Esta carpeta ya tiene todo lo que hace falta: el cuaderno, los datos y la lista de
+bibliotecas. No hay que descargar nada más.</p>
+
+<div class="elegi">
+  <strong>Elegí un camino y seguilo hasta el final.</strong> Los cuatro llegan al mismo
+  lugar. No hace falta hacer más de uno.
+  <ol>
+    <li><a href="#a">Windows</a></li>
+    <li><a href="#b">Windows con Visual Studio Code</a></li>
+    <li><a href="#c">Mac con Visual Studio Code</a></li>
+    <li><a href="#d">Docker, en cualquier sistema</a></li>
+    <li><a href="#e">Google Colab, sin instalar nada</a></li>
+  </ol>
+  <p style="margin:10px 0 0"><strong>¿No sabés cuál elegir?</strong> Si nunca instalaste
+  Python y solo querés que funcione hoy, andá al <a href="#e">camino 5, Colab</a>.
+  Si querés trabajar en tu computadora, el <a href="#a">camino 1</a>.</p>
+</div>
+
+<h2 id="a">1 · Windows</h2>
+<ol>
+  <li>Abrí esta carpeta en el Explorador de archivos.</li>
+  <li>Hacé clic en la barra de dirección de arriba, escribí <code>cmd</code> y apretá
+      Enter. Se abre una ventana negra parada en esta carpeta.</li>
+  <li>Escribí estas líneas, una por vez, esperando que termine cada una:</li>
+</ol>
+<pre>py -3.13 -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python scripts\verificar_entorno.py</pre>
+<div class="aviso">
+  <strong>Si la primera línea dice que no encuentra esa versión</strong>, probá con
+  <code>py -3.12 -m venv .venv</code> y después con <code>py -3.11 -m venv .venv</code>.
+  Si ninguna funciona, entrá a <code>python.org</code>, bajá <strong>Python 3.13</strong>
+  —no la última— e instalala tildando <em>Add python.exe to PATH</em>.
+  <strong>No desinstales nada de lo que ya tengas</strong>: en una misma computadora
+  conviven varias versiones sin molestarse.
+</div>
+<div class="ok">
+  Después de la segunda línea, adelante del cursor tiene que aparecer
+  <code>(.venv)</code>. La última línea tiene que terminar diciendo
+  <code>RESULTADO: entorno correcto</code>.
+</div>
+<ol start="4">
+  <li>Para abrir el cuaderno, escribí <code>jupyter lab</code> y se abre solo en el
+      navegador.</li>
+</ol>
+
+<h2 id="b">2 · Windows con Visual Studio Code</h2>
+<ol>
+  <li><em>Archivo → Abrir carpeta</em>, y elegí esta carpeta. A la izquierda tienen que
+      verse el cuaderno y la carpeta <code>datos</code>.</li>
+  <li>Si te ofrece instalar las extensiones <strong>Python</strong> y
+      <strong>Jupyter</strong>, aceptá.</li>
+  <li>Abrí la terminal con <code>Ctrl + Ñ</code> y escribí, una línea por vez:</li>
+</ol>
+<pre>py -3.13 -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt</pre>
+<ol start="4">
+  <li>Abrí el archivo <code>.ipynb</code> con un clic.</li>
+  <li>Arriba a la derecha dice <strong>Seleccionar kernel</strong>. Clic ahí,
+      <em>Entornos de Python</em>, y elegí <strong>.venv</strong>.</li>
+  <li>Corré la primera celda con el triangulito de la izquierda.</li>
+</ol>
+<div class="aviso">
+  <strong>No escribas <code>activate</code> en Visual Studio Code.</strong> No hace falta,
+  y en muchas máquinas PowerShell lo bloquea. Por eso la instalación usa
+  <code>.venv\Scripts\python</code> directamente.<br><br>
+  <strong>Si no aparece <code>.venv</code> en la lista de kernels</strong>, cerrá y volvé
+  a abrir Visual Studio Code. Si sigue sin aparecer, <code>Ctrl+Shift+P</code> →
+  <em>Python: Select Interpreter</em> → <em>Enter interpreter path</em>, y apuntá a
+  <code>.venv\Scripts\python.exe</code> dentro de esta carpeta.
+</div>
+
+<h2 id="c">3 · Mac con Visual Studio Code</h2>
+<ol>
+  <li><em>Archivo → Abrir carpeta</em>, y elegí esta carpeta.</li>
+  <li>Si te ofrece instalar las extensiones <strong>Python</strong> y
+      <strong>Jupyter</strong>, aceptá.</li>
+  <li>Abrí la terminal desde <em>Terminal → Nueva terminal</em> y escribí, una línea por
+      vez:</li>
+</ol>
+<pre>python3.13 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt</pre>
+<ol start="4">
+  <li>Abrí el archivo <code>.ipynb</code> con un clic.</li>
+  <li>Arriba a la derecha, <strong>Seleccionar kernel</strong> →
+      <em>Entornos de Python</em> → <strong>.venv</strong>.</li>
+  <li>Corré la primera celda.</li>
+</ol>
+<div class="aviso">
+  <strong>Si dice <code>command not found</code></strong>, probá con
+  <code>python3.12</code> y después con <code>python3</code>. Si ninguno funciona, entrá a
+  <code>python.org</code>, bajá <strong>Python 3.13 para macOS</strong> e instalalo.
+  No desinstales nada.<br><br>
+  <strong>Si <code>python3</code> a secas te da 3.14</strong>, el entorno se crea pero
+  después falla la instalación de una biblioteca. En ese caso hay que instalar la 3.13 y
+  escribir <code>python3.13</code> explícitamente.
+</div>
+
+<h2 id="d">4 · Docker, en cualquier sistema</h2>
+<ol>
+  <li>Abrí Docker Desktop y esperá a que abajo a la izquierda diga
+      <em>Engine running</em>.</li>
+  <li>Abrí una terminal parada en esta carpeta. En Windows: clic en la barra de dirección
+      del Explorador, escribir <code>cmd</code> y Enter. En Mac: clic derecho sobre la
+      carpeta → <em>Servicios → Nueva terminal en la carpeta</em>.</li>
+  <li>Escribí esta línea. <strong>La primera vez tarda entre 5 y 15 minutos</strong>,
+      porque baja e instala todo:</li>
+</ol>
+<pre>docker build -t unraf-aa .</pre>
+<ol start="4">
+  <li>Cuando termine, escribí la que corresponda a tu sistema:</li>
+</ol>
+<pre>docker run --rm -p 8888:8888 -v "%cd%":/trabajo unraf-aa     (Windows)
+docker run --rm -p 8888:8888 -v "$PWD":/trabajo unraf-aa     (Mac)</pre>
+<ol start="5">
+  <li>Abrí el navegador en <strong>http://localhost:8888</strong>. Ahí está el cuaderno.</li>
+</ol>
+<div class="ok">
+  Todo lo que escribas queda guardado en esta carpeta, en tu computadora. Para cortar el
+  servidor, <code>Ctrl+C</code> en la terminal.
+</div>
+
+<h2 id="e">5 · Google Colab, sin instalar nada</h2>
+<p>Corre en el navegador, con una cuenta de Google. No hay que instalar Python ni nada
+más. Es el camino más rápido para empezar hoy.</p>
+<ol>
+  <li>Entrá a <code>colab.research.google.com</code>.</li>
+  <li><em>Archivo → Subir cuaderno</em>, y elegí el archivo <code>.ipynb</code> de esta
+      carpeta.</li>
+  <li>A la izquierda hay un ícono de <strong>carpeta</strong>. Hacé clic, y después en el
+      ícono de subir archivo. Subí el <strong>zip completo</strong>, el mismo que
+      descargaste.</li>
+  <li>Arriba de todo, insertá una celda nueva con <em>+ Código</em> y pegá esto,
+      reemplazando el nombre del zip por el que subiste:</li>
+</ol>
+<pre>!unzip -q -o NOMBRE_DEL_ZIP.zip -d /content
+!pip install -q ucimlrepo fg-data-profiling mlxtend</pre>
+<ol start="5">
+  <li>Corré esa celda primero, y después seguí con el cuaderno desde el principio.</li>
+</ol>
+<div class="aviso">
+  <strong>Colab borra los archivos cuando se cierra la sesión.</strong> Lo que escribas en
+  el cuaderno se guarda en tu Google Drive, pero los archivos subidos no. Cada vez que
+  volvés, hay que repetir los pasos 3 y 4.<br><br>
+  <strong>Si alguna celda dice <code>No module named</code> seguido de un nombre</strong>,
+  agregá una celda con <code>!pip install -q</code> y ese nombre, corréla, y seguí.
+</div>
+<div class="ok">
+  En Colab los datos se descargan de internet la primera vez que se usan, en lugar de
+  salir de la carpeta. Es normal que la primera carga tarde unos segundos.
+</div>
+
+<h2>Si algo falla</h2>
+<p>No repitas los pasos ni pruebes otro camino. Copiá <strong>la última línea del
+error</strong>, la que empieza con una palabra en mayúsculas, y mandala. Con esa línea
+alcanza para saber qué pasó.</p>
+
+<h2>Qué hay en esta carpeta</h2>
+<ul>
+  <li><code>.ipynb</code> — el cuaderno del laboratorio.</li>
+  <li><code>datos/</code> — el catálogo de conjuntos de la materia, con los datos ya
+      descargados. <strong>No la muevas ni le cambies el nombre</strong>: el cuaderno la
+      busca al lado suyo.</li>
+  <li><code>requirements.txt</code> — la lista de bibliotecas y sus versiones.</li>
+  <li><code>scripts/verificar_entorno.py</code> — comprueba que quedó todo bien.</li>
+  <li><code>Dockerfile</code> — solo se usa en el camino 4.</li>
+</ul>
+
+</body>
+</html>

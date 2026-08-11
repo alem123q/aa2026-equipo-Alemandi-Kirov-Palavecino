@@ -1,0 +1,29 @@
+# --- Entorno virtual: NUNCA se versiona ---
+.venv/
+venv/
+env/
+
+# --- Caché de Python y Jupyter ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Archivos de sistema y basurita con punto inicial ---
+.DS_Store
+._*
+.EMPEZAR_ACA.html
+.LAB01_entorno_reproducible.ipynb
+Thumbs.db
+
+# --- Caché de datos: se regenera con el catálogo, no se sube ---
+datos/crudos/*
+datos/derivados/*
+salidas/*
+
+# --- Pero conservá los .gitkeep para que las carpetas existan al clonar ---
+!datos/crudos/.gitkeep
+!datos/derivados/.gitkeep
+!salidas/.gitkeep
+
+# Caché del catálogo: se regenera, no se versiona
+datos/cache/

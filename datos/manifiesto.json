@@ -1,0 +1,83 @@
+{
+  "version": "2026.1",
+  "conjuntos": {
+    "bici": {
+      "huella": "b3b39237e9fa4cc0",
+      "filas": 17379,
+      "columnas": 13,
+      "registrado_en_primera_carga": true
+    },
+    "aire": {
+      "huella": "a838e7ca93cce162",
+      "filas": 9357,
+      "columnas": 15,
+      "registrado_en_primera_carga": true
+    },
+    "banco": {
+      "huella": "d534a7c2ed36853b",
+      "filas": 45211,
+      "columnas": 17,
+      "registrado_en_primera_carga": true
+    },
+    "bosque": {
+      "huella": "9e3cb478ebf32ce9",
+      "filas": 581012,
+      "columnas": 55,
+      "registrado_en_primera_carga": true
+    },
+    "porotos": {
+      "huella": "de1f2e9f1342530a",
+      "filas": 13611,
+      "columnas": 17,
+      "registrado_en_primera_carga": true
+    },
+    "autos": {
+      "huella": "2e0df35d0fbd8289",
+      "filas": 72983,
+      "columnas": 33,
+      "registrado_en_primera_carga": true
+    },
+    "retail": {
+      "huella": "d5b3ab82a363fa5b",
+      "filas": 1067371,
+      "columnas": 8,
+      "registrado_en_primera_carga": true
+    },
+    "actividad": {
+      "huella": "bfd8511157ee2d9a",
+      "filas": 10299,
+      "columnas": 562,
+      "registrado_en_primera_carga": true
+    },
+    "adultos": {
+      "huella": "945ffc0aebaf357a",
+      "filas": 48842,
+      "columnas": 15,
+      "registrado_en_primera_carga": true
+    },
+    "diamantes": {
+      "huella": "1b8812569e371bba",
+      "filas": 53940,
+      "columnas": 10,
+      "registrado_en_primera_carga": true
+    },
+    "sube": {
+      "huella": "267aa19e15b61844",
+      "filas": 2340,
+      "columnas": 5,
+      "registrado_en_primera_carga": true
+    },
+    "agro_ar": {
+      "huella": "c217b1228991a1e3",
+      "filas": 160499,
+      "columnas": 11,
+      "registrado_en_primera_carga": true
+    },
+    "traslados": {
+      "huella": "f3863059248f2e38",
+      "filas": 76362,
+      "columnas": 7,
+      "registrado_en_primera_carga": true
+    }
+  }
+}
